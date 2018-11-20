@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements ConnectionStatusL
             Log.d(TAG, "CapturedVideoUri: " + fileUri);
 
             //SessionUserInfo should be set depending on developer's SSH Server environment
-            SessionUserInfo sessionUserInfo = new SessionUserInfo("sftpuser", "sftp://192.168.43.239", "password", 22);
+            SessionUserInfo sessionUserInfo = new SessionUserInfo("wendy", "192.168.2.10", "lig219", 22);
             SessionController.getSessionController().setUserInfo(sessionUserInfo);
             SessionController.getSessionController().setVideoUrl(fileUri);
             SessionController.getSessionController().setConnectionStatusListener(this);
