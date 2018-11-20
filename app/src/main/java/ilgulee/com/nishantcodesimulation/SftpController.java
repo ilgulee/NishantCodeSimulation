@@ -27,11 +27,7 @@ public class SftpController {
 
     public void disconnect() {
         if (SessionController.isConnected()) {
-            try {
-                SessionController.getSessionController().disconnect();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            SessionController.getSessionController().getSession().disconnect();
         }
     }
 
